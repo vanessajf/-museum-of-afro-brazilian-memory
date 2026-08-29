@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu Digital Afro-Brasileiro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --terracota: #8B4513;
+            --ocre: #D2691E;
+            --verde-escuro: #2E4A2E;
+            --areia: #FDF6E3;
+            --escuro: #2D2D2D;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            color: var(--escuro);
+            background-color: var(--areia);
+        }
+
+        .navbar {
+            background-color: var(--terracota) !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-link:hover {
+            color: var(--ocre) !important;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(46, 74, 46, 0.75), rgba(139, 69, 19, 0.8)),
+                        url('img/banner.webp') center/cover no-repeat;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            color: var(--terracota);
+            border-bottom: 3px solid var(--ocre);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .card {
+            border: none;
+            border-top: 4px solid var(--ocre);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .bg-terracota {
+            background-color: var(--terracota);
+        }
+
+        .bg-verde {
+            background-color: var(--verde-escuro);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--ocre);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--terracota);
+            border: 3px solid var(--ocre);
+        }
+
+        .timeline-item h5 {
+            color: var(--terracota);
+        }
+
+        footer {
+            background-color: var(--escuro);
+            color: #ccc;
+        }
+
+        footer a {
+            color: var(--ocre);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="bi bi-museum"></i> Museu Digital Afro-Brasileiro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#temas">Temas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#acervo">Acervo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#preservacao">Preservação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#lei">Lei 10.639</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero d-flex align-items-center text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Museu Digital Afro-Brasileiro</h1>
+            <p class="lead mt-3">Preservando e valorizando a memória, a história e a cultura do povo afro-brasileiro por meio do patrimônio digital.</p>
+            <a href="#sobre" class="btn btn-light btn-lg mt-3">
+                <i class="bi bi-arrow-down-circle"></i> Conheça o Projeto
+            </a>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-4">Sobre o Projeto</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p>O <strong>Museu Digital Afro-Brasileiro</strong> é um projeto inspirado no Museu Afro-Digital da Memória Africana e Afro-Brasileira da UFBA, criado como resposta à necessidade de preservar e divulgar a rica herança cultural afro-brasileira.</p>
+                    <p>Baseado no artigo <em>"The Dilemmas of Digital Patrimonialization: The Digital Museum of African and Afro-Brazilian Memory"</em> de Livio Sansone (2013), este projeto explora como as novas tecnologias digitais podem democratizar o acesso à memória e à cultura dos povos africanos e afro-descendentes.</p>
+                    <p>O Museu Digital surge como uma zona de democratização, um espaço conceitual que estimula o uso das memórias sociais de minorias étnicas e movimentos sociais, contribuindo para a integração da cultura clássica e popular.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/imagemprincipal.webp" alt="Cultura afro-brasileira" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEMAS -->
+    <section id="temas" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-4">Galeria de Temas</h2>
+            <p class="mb-4">Conheça os principais temas abordados pelo Museu Digital, refletindo a diversidade cultural afro-brasileira.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/capoeira-card.webp" class="card-img-top" alt="Capoeira">
+                        <div class="card-body">
+                            <h5 class="card-title">Capoeira</h5>
+                            <p class="card-text">Arte marcial afro-brasileira que combina luta, dança e música. Patrimônio Cultural Imaterial da Humanidade pela UNESCO.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/samba-card.webp" class="card-img-top" alt="Carnaval e Samba">
+                        <div class="card-body">
+                            <h5 class="card-title">Samba e Carnaval</h5>
+                            <p class="card-text">Expressões culturais centrais da identidade brasileira com raízes profundas nas tradições africanas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/religioes-card.webp" class="card-img-top" alt="Religiões Afro-brasileiras">
+                        <div class="card-body">
+                            <h5 class="card-title">Religiões de Matriz Africana</h5>
+                            <p class="card-text">Candomblé, Umbanda e outras religiões que preservam os saberes e rituais trazidos da África.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/memoria-card.webp" class="card-img-top" alt="Memória e Resistência">
+                        <div class="card-body">
+                            <h5 class="card-title">Memória e Resistência</h5>
+                            <p class="card-text">Registros históricos da luta do povo negro por igualdade, liberdade e reconhecimento social.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACEVO -->
+    <section id="acervo" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-4">Acervo e Tipos de Documentos</h2>
+            <p class="mb-4">O Museu Digital trabalha com três categorias de documentos para preservar e divulgar a memória afro-brasileira:</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="bi bi-archive display-3 text-terracota"></i>
+                            <h5 class="card-title mt-3">Documentos Herdados</h5>
+                            <p class="card-text">Cópias digitais recuperadas de coleções já existentes em arquivos nacionais e internacionais, como o Arquivo Nacional, a Biblioteca Nacional e instituições estrangeiras.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="bi bi-journal-richtext display-3 text-terracota"></i>
+                            <h5 class="card-title mt-3">Documentos de Pesquisadores</h5>
+                            <p class="card-text">Produção acadêmica e documentos fornecidos por pesquisadores da rede, incluindo materiais produzidos durante campo e estudos sobre cultura afro-brasileira.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="bi bi-camera-video display-3 text-terracota"></i>
+                            <h5 class="card-title mt-3">Documentos Criados do Zero</h5>
+                            <p class="card-text">Testemunhos, fotografias, gravações sonoras e entrevistas produzidas pelo próprio museu, capturando memórias vivas de lideranças, mães e pais de santo e ativistas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESERVACAO DIGITAL -->
+    <section id="preservacao" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-4">Preservação Digital</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p>O artigo de Sansone identifica quatro conceitos políticos que orientam a criação de acervos digitais afro-brasileiros:</p>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="text-terracota"><i class="bi bi-globe-americas"></i> Repatriação Digital</h5>
+                                    <p class="card-text">Sugere que arquivos estrangeiros conservem os originais, mas compartilhem cópias digitais livremente, permitindo que pesquisadores analisem documentos sem viajar ao exterior.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="text-terracota"><i class="bi bi-gift"></i> Doação Digital</h5>
+                                    <p class="card-text">Política de disponibilização de documentos anteriormente difíceis de acessar, inspirando práticas de doação digital por meio da plataforma online do museu.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="text-terracota"><i class="bi bi-search"></i> Etnografia Digital</h5>
+                                    <p class="card-text">Método que combina pesquisa de campo com digitalização móvel, criando um "museu itinerante" que busca seu público e gera momentos de dramatização da memória.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="text-terracota"><i class="bi bi-heart"></i> Generosidade Digital</h5>
+                                    <p class="card-text">Compartilhamento de dados secundários e primários, experiências de pesquisa e fontes, utilizando a internet como forma de democratizar o conhecimento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img src="img/preservacao-card.webp" alt="Acervo digital" class="img-fluid rounded shadow">
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6><i class="bi bi-info-circle"></i> Por que é importante?</h6>
+                        <p class="small mb-0">No Brasil, pouco foi feito para preservar a memória dos conflitos e da vida cotidiana da população afro-brasileira. Museus, galerias e arquivos especializados são poucos e em mau estado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEI 10.639 -->
+    <section id="lei" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-4">Lei nº 10.639/2003</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5><i class="bi bi-bank"></i> O que é a Lei?</h5>
+                            <p>A Lei Federal nº 10.639, de 9 de maio de 2003, altera a Lei nº 9.394, de 20 de dezembro de 1996 (Lei de Diretrizes e Bases da Educação Nacional), estabelecendo a obrigatoriedade do ensino de história e cultura afro-brasileira e africana nos estabelecimentos de ensino públicos e particulares.</p>
+                            <p>A lei determina que o conteúdo programático inclua o estudo da história da África e dos africanos, a luta dos negros no Brasil, a cultura negra brasileira e o combate ao racismo.</p>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5><i class="bi bi-exclamation-triangle"></i> O Desafio</h5>
+                            <p>Como afirma Sansone, a implementação efetiva da Lei 10.639 não é possível sem a preservação de coleções de documentos, imagens visuais e materiais audiovisuais. É necessário preservar memórias, sons e imagens que documentem a experiência afro-brasileira.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="mb-3">Linha do Tempo</h5>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>2003</h5>
+                            <p>Publicação da Lei nº 10.639, tornando obrigatório o ensino de história e cultura afro-brasileira.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>2008</h5>
+                            <p>Criação do Museu Afro-Digital da UFBA, iniciando a digitalização de acervos.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>2010</h5>
+                            <p>Primeiro seminário nacional de lançamento do Museu Digital, com equipes em 4 estados.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>2013</h5>
+                            <p>Publicação do artigo de Livio Sansone sobre os dilemas da patrimonialização digital.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Hoje</h5>
+                            <p>O Museu Digital continua expandindo seu acervo e rede de colaboradores em todo o Brasil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTATISTICAS -->
+    <section class="py-5 bg-verde text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h2 class="display-4 fw-bold">56%</h2>
+                    <p>da população brasileira se autodeclara negra ou parda (IBGE 2022)</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h2 class="display-4 fw-bold">20+</h2>
+                    <p>anos desde a promulgação da Lei 10.639</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h2 class="display-4 fw-bold">450+</h2>
+                    <p>pesquisadores na rede internacional do Museu Afro-Digital</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-4">Referências e Contato</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5>Referências Bibliográficas</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">SANSONE, Livio. <em>The Dilemmas of Digital Patrimonialization: The Digital Museum of African and Afro-Brazilian Memory.</em> History in Africa, v. 40, p. 257-273, 2013.</li>
+                        <li class="list-group-item">SCHWARCZ, Lilia. <em>The Spectacle of the Races: Scientists, Institutions, and the Race Question in Brazil, 1870-1930.</em> New York: Farrar, Straus and Giroux, 1996.</li>
+                        <li class="list-group-item">SANTOS, Myrian Sepúlveda dos. <em>Museums Without a Past: The Brazilian Case.</em> International Journal of Cultural Studies, v. 6-2, p. 180-201, 2003.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h5>Links Úteis</h5>
+                    <div class="list-group list-group-flush">
+                        <a href="https://museuafrodigital.ufba.br/" target="_blank" class="list-group-item list-group-item-action">
+                            <i class="bi bi-box-arrow-up-right"></i> Museu Afro-Digital da UFBA
+                        </a>
+                        <a href="https://www.planalto.gov.br/ccivil_03/leis/2003/l10.639.htm" target="_blank" class="list-group-item list-group-item-action">
+                            <i class="bi bi-box-arrow-up-right"></i> Texto da Lei 10.639/2003
+                        </a>
+                        <a href="https://www.gov.br/iphan/pt-br" target="_blank" class="list-group-item list-group-item-action">
+                            <i class="bi bi-box-arrow-up-right"></i> IPHAN - Patrimônio Cultural
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4">
+        <div class="container text-center">
+            <p class="mb-1">
+                <i class="bi bi-museum"></i> Museu Digital Afro-Brasileiro
+            </p>
+            <p class="small mb-0">Projeto educacional baseado no artigo de Livio Sansone (2013) e no
+                <a href="https://museuafrodigital.ufba.br/" target="_blank">Museu Afro-Digital da UFBA</a>.
+            </p>
+            <p class="small text-muted mt-2">Imagens: acervo pessoal e fontes livres</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
